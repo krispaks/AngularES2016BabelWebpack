@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const webpack = require('webpack');
 const path = require('path');
+const watch = require('gulp-watch');
 
 gulp.task('webpack', ['clean'], (cb) => {
     const config = require('./webpack.dist.config');
@@ -17,4 +18,8 @@ gulp.task('clean', (cb) => {
         .then(()=>{
             cb();
         });
+});
+
+gulp.task('watch', () => {
+    gulp.watch('./app/**/*.js', ['webpack']);
 });

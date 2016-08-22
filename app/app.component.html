@@ -1,0 +1,20 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-click="$ctrl.toggleSideNav()">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+    <md-content layout-margin>
+        <md-menu>
+            <md-menu-content>
+                <md-menu-item ng-repeat="item in $ctrl.menus">
+                    <md-button>
+                        {{item}}
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-content>
+</md-sidenav>

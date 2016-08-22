@@ -6,7 +6,6 @@ const watch = require('gulp-watch');
 
 gulp.task('webpack', ['clean'], (cb) => {
     const config = require('./webpack.dist.config');
-    //config.entry.app = ['babel-polyfill', path.join(__dirname, './', 'app/app.js')];
     config.entry.app = ['babel-polyfill', './app/app.js'];
     webpack(config, () => {
         cb();
@@ -22,4 +21,5 @@ gulp.task('clean', (cb) => {
 
 gulp.task('watch', () => {
     gulp.watch('./app/**/*.js', ['webpack']);
+    gulp.watch('./app/*.js', ['webpack']);
 });

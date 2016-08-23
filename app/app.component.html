@@ -6,15 +6,28 @@
     </div>
 </md-toolbar>
 <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
-    <md-content layout-margin>
-        <md-menu>
-            <md-menu-content>
-                <md-menu-item ng-repeat="item in $ctrl.menus">
-                    <md-button>
-                        {{item}}
-                    </md-button>
-                </md-menu-item>
-            </md-menu-content>
-        </md-menu>
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            Menu
+        </div>       
+    </md-toolbar> 
+    <md-content>
+        <md-list>
+            <md-subheader class="md-no-sticky">Pages</md-subheader>
+            <md-list-item>
+                <md-button>Home</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button>Preferences</md-button>
+            </md-list-item>            
+            <md-divider></md-divider>
+            <md-subheader class="md-no-sticky">Actions</md-subheader>
+            <md-list-item>
+                <md-button>Help</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button>Logout</md-button>
+            </md-list-item>
+        </md-list>
     </md-content>
 </md-sidenav>
